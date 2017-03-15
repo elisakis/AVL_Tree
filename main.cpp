@@ -86,7 +86,7 @@ void bstree::insert(int x,nodeptr &p)
 		}
 		else
 		{
-			cout<<"Ýëåìåíò ñóùåñòâóåò\n"<<endl;
+			cout<<"Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n"<<endl;
 		}
     }
     int m,n,d;
@@ -101,7 +101,7 @@ nodeptr bstree::findmin(nodeptr p)
 {
 	if (p==NULL)
 	{
-		cout<<"Â äåðåâå íåò ýëåìåíòîâ\n"<<endl;
+		cout<<"Ð’ Ð´ÐµÑ€ÐµÐ²Ðµ Ð½ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²\n"<<endl;
 		return p;
 	}
 	else
@@ -119,7 +119,7 @@ nodeptr bstree::findmax(nodeptr p)
 {
 	if (p==NULL)
 	{
-		cout<<"Â äåðåâå íåò ýëåìåíòîâ\n"<<endl;
+		cout<<"Ð’ Ð´ÐµÑ€ÐµÐ²Ðµ Ð½ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²\n"<<endl;
 		return p;
 	}
 	else
@@ -137,7 +137,7 @@ void bstree::find(int x,nodeptr &p)
 {
 	if (p==NULL)
 	{
-		cout<<"Òàêîãî ýëåìåíòà íåò\n"<<endl;
+		cout<<"Ð¢Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚\n"<<endl;
 	}
 	else
 	{
@@ -153,7 +153,7 @@ void bstree::find(int x,nodeptr &p)
 			}
 			else
 			{
-				cout<<"Ýëåìåíò åñòü â äåðåâå!\n"<<endl;
+				cout<<"Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÐµÑÑ‚ÑŒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ!\n"<<endl;
 			}
 		}
 	}
@@ -204,7 +204,7 @@ void bstree::del(int x,nodeptr &p)
 	nodeptr d;
 	if (p==NULL)
 	{
-		cout<<"Òàêîãî ýëåìåíòà íåò\n"<<endl;
+		cout<<"Ð¢Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚\n"<<endl;
 	}
 	else if ( x < p->element)
 	{
@@ -219,21 +219,21 @@ void bstree::del(int x,nodeptr &p)
 		d=p;
 		free(d);
 		p=NULL;
-		cout<<"Ýëåìåíò óäàëåí\n"<<endl;
+		cout<<"Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n"<<endl;
 	}
 	else if (p->left == NULL)
 	{
 		d=p;
 		free(d);
 		p=p->right;
-		cout<<"Ýëåìåíò óäàëåí\n"<<endl;
+		cout<<"Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n"<<endl;
 	}
 	else if (p->right == NULL)
 	{
 		d=p;
 		p=p->left;
 		free(d);
-		cout<<"Ýëåìåíò óäàëåí\n"<<endl;
+		cout<<"Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n"<<endl;
 	}
 	else
 	{
@@ -244,7 +244,7 @@ void bstree::del(int x,nodeptr &p)
 int bstree::deletemin(nodeptr &p)
 {
 	int c;
-	cout<<"Âûáðàíî óäàëåíèå ìèíèìàëüíîãî çíà÷åíèÿ\n"<<endl;
+	cout<<"Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ\n"<<endl;
 	if (p->left == NULL)
 	{
 		c=p->element;
@@ -362,53 +362,53 @@ int main()
 
 	root = NULL;
 	root1=NULL;
-	cout<<"::::::::::::  ÀÂË Äåðåâî  ::::::::::::"<<endl;
+	cout<<"::::::::::::  ÐÐ’Ð› Ð”ÐµÑ€ÐµÐ²Ð¾  ::::::::::::"<<endl;
 	cout<<"::::::::::::::::::::::::::::::::::::::\n"<<endl;
 
 	do
 	{
 		cout<<"::::::::::::::::::::::::::::::::::::::"<<endl;
-		cout<<":::: 1 Âñòàâèòü íîâûé óçåë :::::::::::"<<endl;
-		cout<<":::: 2 Íàéòè ìèíèìàëüíûé ýëåìåíò :::::"<<endl;
-		cout<<":::: 3 Íàéòè ìàêñèìàëüíûé ýëåìåíò ::::"<<endl;
-		cout<<":::: 4 Ïîèñê ïî çíà÷åíèþ :::::::::::::"<<endl;
-		cout<<":::: 5 Óäàëèòü ýëåìåíò :::::::::::::::"<<endl;
-		cout<<":::: 6 Âàðèàíò îáõîäà PreOrder :::::::"<<endl;
-		cout<<":::: 7 Âàðèàíò îáõîäà InOrder ::::::::"<<endl;
-		cout<<":::: 8 Âàðèàíò îáõîäà PostOrder ::::::"<<endl;
-		cout<<":::: 9 Ïîêàçàòü âûñîòó äåðåâà ::::::::"<<endl;
-		cout<<":::: 0 Âûõîä :::::::::::::::::::::::::"<<endl;
+		cout<<":::: 1 Ð’ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð²Ñ‹Ð¹ ÑƒÐ·ÐµÐ» :::::::::::"<<endl;
+		cout<<":::: 2 ÐÐ°Ð¹Ñ‚Ð¸ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ :::::"<<endl;
+		cout<<":::: 3 ÐÐ°Ð¹Ñ‚Ð¸ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ::::"<<endl;
+		cout<<":::: 4 ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÑŽ :::::::::::::"<<endl;
+		cout<<":::: 5 Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ :::::::::::::::"<<endl;
+		cout<<":::: 6 Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° PreOrder :::::::"<<endl;
+		cout<<":::: 7 Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° InOrder ::::::::"<<endl;
+		cout<<":::: 8 Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° PostOrder ::::::"<<endl;
+		cout<<":::: 9 ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ Ð´ÐµÑ€ÐµÐ²Ð° ::::::::"<<endl;
+		cout<<":::: 0 Ð’Ñ‹Ñ…Ð¾Ð´ :::::::::::::::::::::::::"<<endl;
 		cout<<"::::::::::::::::::::::::::::::::::::::\n"<<endl;
 
-		cout<<"\nÂûáåðèòå íóæíîå äåéñòâèå è íàæìèòå Enter: ";
+		cout<<"\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð½ÑƒÐ¶Ð½Ð¾Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ Ð¸ Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ Enter: ";
 		cin>>choice;
 
 		switch(choice)
 		{
 			case 1:
-				cout<<"\nÄîáàâëåíèå íîâîãî óçëà"<<endl;
+				cout<<"\nÐ”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð³Ð¾ ÑƒÐ·Ð»Ð°"<<endl;
 				cout<<"::::::::::::::::::::::\n"<<endl;
-				cout<<"Ââåäèòå ýëåìåíò: ";
+				cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 				cin>>a;
 				bst.insert(a,root);
-				cout<<"\nÍîâûé ýëåìåíò äîáàâëåí óñïåøíî\n"<<endl;
+				cout<<"\nÐÐ¾Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾\n"<<endl;
 				break;
 			case 2:
 				if (root !=NULL)
 				{
 					min=bst.findmin(root);
-					cout<<"\nÌèíèìàëüíûé ýëåìåíò â äåðåâå: "<<min->element<<endl;
+					cout<<"\nÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ: "<<min->element<<endl;
 				}
 				break;
 			case 3:
 				if (root !=NULL)
 				{
 					max=bst.findmax(root);
-					cout<<"\nÌàêñèìàëüíûé ýëåìåíò â äåðåâå: "<<max->element<<endl;
+					cout<<"\nÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ: "<<max->element<<endl;
 				}
 				break;
 			case 4:
-				cout<<"\nÂâåäèòå èñêîìûé ýëåìåíò: ";
+				cout<<"\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸ÑÐºÐ¾Ð¼Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 				cin>>findele;
 				if (root != NULL)
 				{
@@ -416,36 +416,36 @@ int main()
 				}
 				break;
 			case 5:
-				cout<<"\nÊàêîé óçåë óäàëÿòü? : ";
+				cout<<"\nÐšÐ°ÐºÐ¾Ð¹ ÑƒÐ·ÐµÐ» ÑƒÐ´Ð°Ð»ÑÑ‚ÑŒ? : ";
 				cin>>delele;
 				bst.del(delele,root);
 				bst.inorder(root);
 				cout<<endl;
 				break;
 			case 6:
-				cout<<"\nÂàðèàíò îáõîäà PreOrder"<<endl;
+				cout<<"\nÐ’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° PreOrder"<<endl;
 				bst.preorder(root);
 				cout<<endl;
 				break;
 			case 7:
-				cout<<"\nÂàðèàíò îáõîäà InOrder"<<endl;
+				cout<<"\nÐ’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° InOrder"<<endl;
 				bst.inorder(root);
 				cout<<endl;
 				break;
 			case 8:
-				cout<<"\nÂàðèàíò îáõîäà PostOrder"<<endl;
+				cout<<"\nÐ’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¾Ð±Ñ…Ð¾Ð´Ð° PostOrder"<<endl;
 				bst.postorder(root);
 				cout<<endl;
 				break;
 			case 9:
-				cout<<"\nÄåðåâî èìååò âûñîòó: "<<bst.bsheight(root)<<endl;
+				cout<<"\nÐ”ÐµÑ€ÐµÐ²Ð¾ Ð¸Ð¼ÐµÐµÑ‚ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ: "<<bst.bsheight(root)<<endl;
 
 				break;
 			case 0:
-				cout<<"\nÄî ñâèäàíèÿ\n"<<endl;
+				cout<<"\nÐ”Ð¾ ÑÐ²Ð¸Ð´Ð°Ð½Ð¸Ñ\n"<<endl;
 				break;
 			default:
-				cout<<"Îøèáêà ââîäà\n"<<endl;
+				cout<<"ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°\n"<<endl;
 				break;
 		}
 
@@ -455,4 +455,3 @@ int main()
 
 	return 0;
 }
-
